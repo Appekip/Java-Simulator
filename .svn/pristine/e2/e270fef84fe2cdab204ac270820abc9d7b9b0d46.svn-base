@@ -1,0 +1,70 @@
+package testi;
+import java.io.IOException;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import simu.framework.*;
+import simu.framework.Trace.Level;
+import simu.model.OmaMoottori;
+import view.mainmenuController;
+
+public class Simulaattori extends Application {
+	
+	private Stage primaryStage;
+	private BorderPane rootLayout;
+    
+
+	public static void main(String[] args) {
+		launch(args);
+		
+		
+		Trace.setTraceLevel(Level.INFO);
+		Moottori m = new OmaMoottori();
+		m.setSimulointiaika(2000);//Simulaattori pyörii 2 sekuntia
+		m.aja();
+		System.out.println("Muokkaus");
+		
+				
+		
+	}
+	
+		
+
+		@Override
+		public void start(Stage primaryStage) {
+			try {
+				AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("mainmenu.fxml"));
+				Scene scene = new Scene(root,400,400);
+				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+				primaryStage.setScene(scene);
+				primaryStage.show();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		public void showmainMenu() {
+			try {
+			FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Simulaattori.class.getResource("view/mainmenu.fxml"));
+            AnchorPane mainmenu = (AnchorPane) loader.load();
+            rootLayout.setCenter(mainmenu);
+            
+            mainmenuController controller = loader.getController();
+            controller.setSimu(this);
+            
+
+       } catch (IOException e) {
+            e.printStackTrace();
+        	}
+		}
+		
+		public Stage getPrimaryStage() {
+			return primaryStage;
+		}	
+}
+	

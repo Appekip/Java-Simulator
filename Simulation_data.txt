@@ -1,0 +1,63 @@
+Simulaatio ajettiin: 2021/03/11 10:54:35
+Asiakkaita oli 496 Ostaneita oli 239. 
+Ostaneiden asiakkaiden prosentti oli: 48%
+Hyllyilltä osti 279 asiakasta.
+Telellä oli 55 asiakasta. Keskimääräinen palveluaika oli: 958 ajan yksikköä
+Kokonaispalveluaika oli 52698, käyttöaste oli 27%
+Techillä oli 56 asiakasta. Keskimääräinen palveluaika oli: 1570 ajan yksikköä
+Kokonaispalveluaika oli 87923, käyttöaste oli 45%
+Home pisteillä oli 45 asiakasta. Keskimääräinen palveluaika oli: 1484 ajan yksikköä
+Kokonaispalveluaika oli 66815, käyttöaste oli 34%
+AW pisteillä oli 55 asiakasta. Keskimääräinen palveluaika oli: 1259 ajan yksikköä
+Kokonaispalveluaika oli 69274, käyttöaste oli 35%
+Kassa 1:llä oli 239 asiakasta. Kassa 2:lla oli 0 asiakasta.
+Kassa 3:lla oli 0 asiakasta.
+Kassojen keskimäärinen palveluaika oli: 862 ajan yksikköä
+Kokonaispalveluaika oli 206023, käyttöaste oli 105%
+Varasto 1:llä oli 97 asiakasta. Varasto 2:lla oli 0 asiakasta. 
+Varaston keskimääräinen palveluaika oli: 591 ajan yksikköä
+Kokonaispalveluaika oli 57388, käyttöaste oli 29%
+Keskimääräinen läpimeno aika oli 392 ajan yksikköä.
+----------------------------
+Simulaatio ajettiin: 2021/03/11 15:59:48
+Asiakkaita oli 24 Ostaneita oli 12. 
+Ostaneiden asiakkaiden prosentti oli: 50%
+Hyllyilltä osti 15 asiakasta.
+Telellä oli 2 asiakasta. Keskimääräinen palveluaika oli: 49 ajan yksikköä
+Kokonaispalveluaika oli 99, käyttöaste oli 11%
+Techillä oli 2 asiakasta. Keskimääräinen palveluaika oli: 89 ajan yksikköä
+Kokonaispalveluaika oli 179, käyttöaste oli 20%
+Home pisteillä oli 0 asiakasta. Keskimääräinen palveluaika oli: 0 ajan yksikköä
+Kokonaispalveluaika oli 0, käyttöaste oli 0%
+AW pisteillä oli 2 asiakasta. Keskimääräinen palveluaika oli: 70 ajan yksikköä
+Kokonaispalveluaika oli 141, käyttöaste oli 16%
+Kassa 1:llä oli 12 asiakasta. Kassa 2:lla oli 0 asiakasta.
+Kassa 3:lla oli 0 asiakasta.
+Kassojen keskimäärinen palveluaika oli: 46 ajan yksikköä
+Kokonaispalveluaika oli 558, käyttöaste oli 64%
+Varasto 1:llä oli 2 asiakasta. Varasto 2:lla oli 0 asiakasta. 
+Varaston keskimääräinen palveluaika oli: 17 ajan yksikköä
+Kokonaispalveluaika oli 34, käyttöaste oli 3%
+Keskimääräinen läpimeno aika oli 36 ajan yksikköä.
+----------------------------
+Simulaatio ajettiin: 2021/03/11 16:22:18
+Asiakkaita oli 995 Ostaneita oli 466. 
+Ostaneiden asiakkaiden prosentti oli: 46%
+Hyllyilltä osti 537 asiakasta.
+Telellä oli 112 asiakasta. Keskimääräinen palveluaika oli: 1952 ajan yksikköä
+Kokonaispalveluaika oli 218666, käyttöaste oli 0%
+Techillä oli 106 asiakasta. Keskimääräinen palveluaika oli: 2954 ajan yksikköä
+Kokonaispalveluaika oli 313217, käyttöaste oli 0%
+Home pisteillä oli 108 asiakasta. Keskimääräinen palveluaika oli: 3523 ajan yksikköä
+Kokonaispalveluaika oli 380562, käyttöaste oli 0%
+AW pisteillä oli 125 asiakasta. Keskimääräinen palveluaika oli: 2831 ajan yksikköä
+Kokonaispalveluaika oli 353936, käyttöaste oli 0%
+Kassa 1:llä oli 466 asiakasta. Kassa 2:lla oli 0 asiakasta.
+Kassa 3:lla oli 0 asiakasta.
+Kassojen keskimäärinen palveluaika oli: 1655 ajan yksikköä
+Kokonaispalveluaika oli 771470, käyttöaste oli 1%
+Varasto 1:llä oli 204 asiakasta. Varasto 2:lla oli 0 asiakasta. 
+Varaston keskimääräinen palveluaika oli: 1238 ajan yksikköä
+Kokonaispalveluaika oli 252611, käyttöaste oli 0%
+Keskimääräinen läpimeno aika oli 681 ajan yksikköä.
+----------------------------

@@ -1,0 +1,81 @@
+package simu.model;
+
+import controller.IKontrolleri;
+import eduni.distributions.Negexp;
+import eduni.distributions.Normal;
+import simu.framework.Kello;
+import simu.framework.Moottori;
+import simu.framework.Saapumisprosessi;
+import simu.framework.Tapahtuma;
+import controller.Kontrolleri;
+import simu.framework.IMoottori;
+
+
+public class OmaMoottori extends Moottori{
+	
+	private Saapumisprosessi saapumisprosessi;
+	
+	private Kontrolleri kontrolleri;
+	
+	
+	public OmaMoottori(IKontrolleri kontrolleri){ // UUSI
+
+		super(kontrolleri); //UUSI
+		
+		palvelupisteet = new Palvelupiste[3];
+	
+		palvelupisteet[0]=new Palvelupiste(new Normal(10,6), tapahtumalista, TapahtumanTyyppi.MYYNTIPISTE);	
+		palvelupisteet[1]=new Palvelupiste(new Normal(10,10), tapahtumalista, TapahtumanTyyppi.KASSA);
+		palvelupisteet[2]=new Palvelupiste(new Normal(5,3), tapahtumalista, TapahtumanTyyppi.VARASTO);
+		
+		saapumisprosessi = new Saapumisprosessi(new Negexp(15,5), tapahtumalista, TapahtumanTyyppi.SAAPUMINEN);
+
+	}
+
+	
+	@Override
+	protected void alustukset() {
+		saapumisprosessi.generoiSeuraava(); // Ensimmäinen saapuminen järjestelmään
+	}
+	
+	@Override
+	protected void suoritaTapahtuma(Tapahtuma t){  // B-vaiheen tapahtumat
+
+		Asiakas a;
+		switch (t.getTyyppi()){
+			
+			case SAAPUMINEN: palvelupisteet[0].lisaaJonoon(new Asiakas());	
+				       saapumisprosessi.generoiSeuraava();	
+				       //kontrolleri.visualisoiAsiakas(); // UUSI
+				break;
+			case MYYNTIPISTE: a = palvelupisteet[0].otaJonosta();
+				   	   palvelupisteet[1].lisaaJonoon(a);
+				break;
+			case KASSA: a = palvelupisteet[1].otaJonosta();
+				   	   palvelupisteet[2].lisaaJonoon(a); 
+				break;  
+			case VARASTO: 
+				       a = palvelupisteet[2].otaJonosta();
+					   a.setPoistumisaika(Kello.getInstance().getAika());
+			           a.raportti(); 
+		}	
+	}
+
+	
+	@Override
+	protected void tulokset() {
+		
+		// VANHAA tekstipohjaista
+		// System.out.println("Simulointi päättyi kello " + Kello.getInstance().getAika());
+		// System.out.println("Tulokset ... puuttuvat vielä");
+		
+		// UUTTA graafista
+		kontrolleri.naytaLoppuaika(Kello.getInstance().getAika());
+		
+	}
+
+
+
+
+	
+}

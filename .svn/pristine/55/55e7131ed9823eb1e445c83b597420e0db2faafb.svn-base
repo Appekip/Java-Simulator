@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="720.0" maxWidth="1280.0" minHeight="360.0" minWidth="480.0" prefHeight="480.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.4007009345794392" prefHeight="480.0" prefWidth="858.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="482.0" prefWidth="347.0" style="-fx-background-color: #3949AB;">
+               <children>
+                  <Pane layoutX="68.0" layoutY="136.0" prefHeight="77.0" prefWidth="204.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: grey; -fx-border-radius: 10; -fx-background-color: #673AB7; -fx-border-width: 2; -fx-background-radius: 13;" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="83.0">
+                     <children>
+                        <Text fill="#c2ba3e" layoutX="54.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asiakasmäärä :     0" />
+                        <Text fill="WHITE" layoutX="54.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aukioloaika" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="13.0" layoutY="14.0" prefHeight="84.0" prefWidth="314.0" style="-fx-background-color: #673AB7; -fx-border-color: grey; -fx-border-radius: 9; -fx-border-width: 4; -fx-background-radius: 13;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <children>
+                        <Label layoutX="38.0" layoutY="29.0" text="Asiakaspalvelu simulaattori" textFill="WHITE" underline="true" wrapText="true">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="84.0" layoutY="247.0" prefHeight="100.0" prefWidth="173.0" style="-fx-border-color: grey; -fx-border-radius: 10; -fx-background-color: #673AB7; -fx-background-radius: 13; -fx-border-width: 2;" AnchorPane.bottomAnchor="131.0" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="247.0">
+                     <children>
+                        <CheckBox layoutX="39.0" layoutY="22.0" mnemonicParsing="false" prefWidth="95.0" text="Noutohylly" textFill="WHITE" />
+                        <CheckBox layoutX="39.0" layoutY="61.0" mnemonicParsing="false" text="Myyntipiste" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="37.0" layoutY="383.0" minWidth="0.0" prefHeight="56.0" prefWidth="268.0" style="-fx-border-color: grey; -fx-border-radius: 10; -fx-background-radius: 13; -fx-background-color: #673AB7; -fx-border-width: 2;" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="34.0">
+                     <children>
+                      <Button layoutX="21.0" layoutY="16.0" mnemonicParsing="false" text="Start" textFill="#001279" underline="true" />
+                        <Button layoutX="93.0" layoutY="16.0" mnemonicParsing="false" text="Hidasta" textFill="#001279" />
+                        <Button layoutX="179.0" layoutY="16.0" mnemonicParsing="false" text="Nopeuta" textAlignment="CENTER" textFill="#001279" />
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Canvas height="240.0" layoutX="42.0" layoutY="20.0" width="426.0" AnchorPane.bottomAnchor="218.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="20.0" />
+                  <TextArea fx:id="console" layoutY="275.0" prefHeight="215.0" prefWidth="433.0" text="asiakas saapui, poistui yms...  (värin muutos external CSS filellä..)" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="275.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+package view;
+
+import simu.model.TapahtumanTyyppi;
+
+public interface IVisualisointi {
+
+	public void tyhjennaNaytto();
+	
+	public void uusiAsiakas(TapahtumanTyyppi palvelupiste, int size);
+
+	public void poistaAsiakas(TapahtumanTyyppi palvelupiste, int size);
+		
+}
+

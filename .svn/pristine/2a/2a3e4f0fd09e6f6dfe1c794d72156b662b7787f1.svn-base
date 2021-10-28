@@ -1,0 +1,123 @@
+package view;
+
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+
+public class Visualisointi extends Canvas implements IVisualisointi{
+
+	private GraphicsContext gc;
+	
+	double i = 150;
+	double j = 190;
+	double k = 365;
+	double e = 240;
+	double r = 240;
+	double m = 365;
+	double n = 240;
+	double b = 365;
+	
+	double q = 360;
+	double w = 200;
+	
+	
+	public Visualisointi(int w, int h) {
+		super(w, h);
+		gc = this.getGraphicsContext2D();
+		tyhjennaNaytto();
+	}
+	
+
+	public void tyhjennaNaytto() {
+		gc.setFill(Color.DARKBLUE);
+		gc.fillRect(25, 0, this.getWidth(), this.getHeight());
+	}
+	
+	
+	
+	public void uusiAsiakas() {
+		gc.setFill(Color.RED);
+		gc.fillOval(i,j,10,10);		
+		i = (i + 8) % this.getWidth();
+		j = (j + 1) % this.getHeight();	
+		k = (k + 5)% this.getWidth();
+		e = (e + 7)% this.getHeight();
+		r = (r + -7)% this.getHeight();
+		m = (m + 9)% this.getWidth();
+		n = (n + 8)% this.getHeight();
+		b = (b + -6)% this.getWidth();
+		q = (q + 2)% this.getWidth();
+		w = (w + -6)% this.getHeight();
+		
+		 try {
+	            Thread.sleep(0);
+	        } catch (InterruptedException e) {
+	        }	
+		
+		gc.fillOval( k, e, 10, 10 );    // TL
+		
+		try {
+            Thread.sleep(110);
+        } catch (InterruptedException e) {
+        	 gc.fillOval( m, r, 10, 10 );   // BL	
+        }	
+		
+		
+	      gc.fillOval( m, r, 10, 10 );   // BL	     	      
+	      gc.fillOval( b, n, 10, 10 );   // TR	      	      
+	      gc.fillOval( q, w, 10, 10 );  // BR
+		
+			
+		
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Kassa 1" , 180, 450);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Kassa 2" , 280, 450);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Kassa 3" , 380, 450);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Varasto" , 480, 450);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Uloskäynti" , 50, 260);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Varasto 2" , 580, 450);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Telepiste" , 220, 50);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Techpiste" , 400, 50);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Awpiste" , 580, 50);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Homepiste " , 580, 150);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(20));
+		gc.fillText("Hylly" , 350, 230);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Sisäänkäynti" , 50, 200);
+	}
+	
+}

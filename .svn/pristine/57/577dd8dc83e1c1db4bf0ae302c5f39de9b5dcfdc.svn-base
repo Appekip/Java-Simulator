@@ -1,0 +1,230 @@
+package view;
+
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import simu.model.TapahtumanTyyppi;
+
+public class Visualisointi extends Canvas implements IVisualisointi{
+
+	private GraphicsContext gc;
+	
+	private double sisäänkäyntiX = 50;
+	private double sisäänkäyntiY = 200;
+	
+	private double hyllyX = 350;
+	private double hyllyY = 230;
+	
+	private double teleX = 220;
+	private double teleY = 50;
+	
+	private double techX = 400;
+	private double techY = 50;
+	
+	private double homeX = 580;
+	private double homeY = 150;
+	
+	private double awX = 580;
+	private double awY = 50;
+	
+	private double k1X = 180;
+	private double k1Y = 450;
+	
+	private double k2X = 280;
+	private double k2Y = 450;
+	
+	private double k3X = 380;
+	private double k3Y = 450;
+	
+	private double v1X = 50;
+	private double v1Y = 450;
+	
+	private double v2X = 580;
+	private double v2Y = 450;
+	
+	
+
+	public Visualisointi(int w, int h) {
+		super(w, h);
+		gc = this.getGraphicsContext2D();
+		tyhjennaNaytto();
+	}
+	
+
+	public void tyhjennaNaytto() {
+		gc.setFill(Color.DARKBLUE);
+		gc.fillRect(25, 0, this.getWidth(), this.getHeight());
+	}
+	
+	
+	
+	public void uusiMyymala() {
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Kassa 1" , 180, 450);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Kassa 2" , 280, 450);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Kassa 3" , 380, 450);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Varasto" , 480, 450);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Uloskäynti" , 50, 260);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Varasto 2" , 580, 450);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Telepiste" , 220, 50);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Techpiste" , 400, 50);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Awpiste" , 580, 50);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Homepiste " , 580, 150);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(20));
+		gc.fillText("Hylly" , 350, 230);
+		
+		gc.setFill(Color.LAWNGREEN);
+		gc.setFont(new Font(15));
+		gc.fillText("Sisäänkäynti" , 50, 200);
+	}
+
+
+	@Override
+	public void poistaAsiakas(TapahtumanTyyppi palvelupiste, int size) {
+		switch (palvelupiste){
+		case SAAPUMINEN:
+			gc.setFill(Color.RED);
+			gc.fillOval(sisäänkäyntiX, sisäänkäyntiY, 10, 10);
+			gc.setFill(Color.DARKBLUE);
+			gc.fillOval(sisäänkäyntiX, sisäänkäyntiY, 10, 10);
+			break;
+			
+		case HYLLY:
+			gc.setFill(Color.DARKBLUE);
+			gc.fillOval(hyllyX, hyllyY, 10, 10);
+			break;
+			
+		case TELEPISTE1:
+			gc.setFill(Color.DARKBLUE);
+			gc.fillOval(teleX, teleY, 10, 10);
+			break;
+		
+		case AWPISTE1:
+			gc.setFill(Color.DARKBLUE);
+			gc.fillOval(awX, awY, 10, 10);
+			break;
+			
+		case KODINKONEPISTE1:
+			gc.setFill(Color.DARKBLUE);
+			gc.fillOval(techX, techY, 10, 10);
+			break;
+		
+		case TECHPISTE1:
+			gc.setFill(Color.DARKBLUE);
+			gc.fillOval(techX, techY, 10, 10);
+			break;
+		
+		case KASSA:
+			break;
+			
+		case KASSA2:
+			break;
+			
+		case KASSA3: 
+			break;
+			
+		case VARASTO:
+			break;
+			
+		case VARASTO2:
+			break;
+		
+		case POISTUMINEN:
+			break;
+		}
+	}
+
+
+	@Override
+	public void lisääAsiakas(TapahtumanTyyppi palvelupiste, int size) {
+		
+		switch (palvelupiste){
+				
+		case HYLLY:
+			gc.setFill(Color.RED);
+			gc.fillOval(hyllyX, hyllyY, 10, 10);
+			break;
+			
+		case TELEPISTE1:
+			gc.setFill(Color.RED);
+			gc.fillOval(teleX, teleY, 10, 10);
+			break;
+		
+		case AWPISTE1:
+			gc.setFill(Color.RED);
+			gc.fillOval(awX, awY, 10, 10);
+			break;
+			
+		case KODINKONEPISTE1:
+			gc.setFill(Color.RED);
+			gc.fillOval(homeX, homeY, 10, 10);
+			break;
+		
+		case TECHPISTE1:
+			gc.setFill(Color.RED);
+			gc.fillOval(techX, techY, 10, 10);
+			break;
+		
+		case KASSA:
+			gc.setFill(Color.RED);
+			gc.fillOval(techX, techY, 10, 10);
+			break;
+			
+		case KASSA2:
+			break;
+			
+		case KASSA3: 
+			break;
+			
+		case VARASTO:
+			break;
+			
+		case VARASTO2:
+			break;
+		
+		case POISTUMINEN:
+			break;
+		}
+				
+		
+	}
+
+
+
+
+
+		
+	}
+	
+

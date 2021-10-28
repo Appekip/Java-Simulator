@@ -1,0 +1,25 @@
+package view;
+
+
+import javafx.scene.control.TextArea;
+import testi.Simulaattori;
+
+
+public class mainmenuController {
+
+private TextArea console;
+private Simulaattori simulaattori;
+
+public void textUpdate(String n) {
+	String tmp = n;
+	console.setText(tmp);
+}
+
+public void setSimu(Simulaattori simulaattori) {
+    this.simulaattori = simulaattori;
+
+    // Add observable list data to the table
+   
+}
+
+}

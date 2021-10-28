@@ -1,0 +1,30 @@
+package testi;
+
+import simu.framework.*;
+import simu.framework.Trace.Level;
+import simu.model.OmaMoottori;
+
+public class Simulaattori{
+
+
+	public static void main(String[] args) {
+		
+		
+		view.SimulaattorinGUI.main(args);
+		
+		
+		Trace.setTraceLevel(Level.INFO);
+		Moottori m = new OmaMoottori();
+		m.setSimulointiaika(2000);//Simulaattori pyörii 2 sekuntia
+		m.aja();
+		System.out.println("Muokkaus");
+		
+				
+		
+	}
+	
+		
+
+	
+}
+	
